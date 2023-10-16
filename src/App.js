@@ -3,7 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import { fetchtopAlbum } from "./api/api";
-import Card from "./components/Card/Card";
+// import Card from "./components/Card/Card";
+import Section from "./components/Section/Section";
 
 const App = () => {
   const [albums, setAlbums] = useState([]);
@@ -22,10 +23,13 @@ const App = () => {
     <div>
       <Navbar />
       <Hero />
-      {albums.map((item) => {
-        return <Card data={item} type="album" />;
-      })}
+      {/* {albums.map((item) => {
+        return <Card data={item} type="album" key={item.title} />;
+      })} */}
       {/* <Card (data)/> */}
+      <div>
+        <Section data={albums} type="album" title="Top Album" />
+      </div>
     </div>
   );
 };

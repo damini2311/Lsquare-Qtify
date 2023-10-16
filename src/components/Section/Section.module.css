@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* padding-left: 5px; */
+}
+.topalbum {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.Card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.toggletext {
+  color: var(--color-primary);
+  cursor: pointer;
+  padding-right: 14px;
+}
+.cardwrapper {
+  margin-top: 10px;
+}
