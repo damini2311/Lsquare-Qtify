@@ -1,0 +1,19 @@
+.swiperWrapper {
+  position: relative;
+  /* margin-top: 20px; */
+}
+
+.leftswiper {
+  position: absolute;
+  left: 25px;
+  top: 40%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+.rightswiper {
+  position: absolute;
+  right: 0px;
+  top: 40%;
+  transform: translate(-50%);
+  z-index: 10;
+}

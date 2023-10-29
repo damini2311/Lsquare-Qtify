@@ -2,36 +2,46 @@ import React, { useState } from "react";
 import styles from "./Section.module.css";
 import { CircularProgress } from "@mui/material";
 import Card from "../Card/Card";
+import Carousel from "../Carousel/Carousel";
+import Box from "@mui/material/Box";
+import BasicTabs from "../Tabs/SongsTabs";
+import Tab from "../Tabs/SongsTabs";
 
 const Section = ({ title, data, type }) => {
-  const [carouselToggle, setCarouseltoggle] = useState(true); ////when "show all" show by default
-
+  const [toggle, setToggle] = useState(true);
   const handleToggle = () => {
-    setCarouseltoggle(!carouselToggle);
+    setToggle(!toggle);
   };
 
   return (
-    <div>
-      <div className={styles.header}>
-        <p className={styles.topalbum}>{title}</p>
-        <h4 className={styles.toggletext} onClick={handleToggle}>
-          {!carouselToggle ? "Collapse All" : "Show All"}
-        </h4>
-      </div>
-      {data.length === 0 ? (
-        <CircularProgress />
+    <div className={styles.sectionContainer}>
+      {type !== "songs" ? (
+        <div className={styles.pageHeader}>
+          <h3 className={styles.sectionLabel}>{title}</h3>
+          <h3 className={styles.toggleLink} onClick={handleToggle}>
+            {toggle ? "Collapse" : "Show all "}
+          </h3>
+        </div>
       ) : (
-        <div className={styles.cardwrapper}>
-          {!carouselToggle ? (
-            <div className={styles.Card}>
-              {data.map((item) => (
-                <Card data={item} type={type} />
-              ))}
+        <>{null}</>
+      )}
+      {data?.length ? (
+        <div className={styles.cardContainer}>
+          {!toggle ? (
+            <div className={styles.contentWrapper}>
+              <h3 className={styles.toggleLink}>
+                Content is Collapsed please click on show all.
+              </h3>
             </div>
           ) : (
-            <></>
+            <Carousel
+              data={data}
+              renderCardComponent={(item) => <Card data={item} type={type} />}
+            />
           )}
         </div>
+      ) : (
+        <CircularProgress />
       )}
     </div>
   );

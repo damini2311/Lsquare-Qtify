@@ -10,6 +10,7 @@
 }
 * {
   margin: 0px;
+  /* margin-top: 10px; */
 }
 html,
 body {
@@ -20,4 +21,12 @@ body {
   font-family: "poppins", sans-serif;
   color: var(--color-white);
   overflow-x: hidden;
+}
+
+/* img,
+svg {
+  display: block;
+} */
+.swiper-slide {
+  width: auto !important;
 }

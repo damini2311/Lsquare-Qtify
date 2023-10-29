@@ -2,10 +2,11 @@
   width: 159px;
   border-radius: 10px;
   /* height: 232px; */
-  margin-bottom: 4px;
+  margin-bottom: 20px;
+  /* margin-top: 10px; */
 }
 .cardimg {
-  width: 162px;
+  width: 169px;
   height: 190px;
   position: relative;
   overflow: hidden;
@@ -13,13 +14,13 @@
   border-top-left-radius: 10px;
 }
 .banner {
-  width: 162px;
+  width: 169px;
   /* border-radius: 10px; */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-top: 0px;
-  margin-left: 0px;
-  background-color: azure;
+  /* margin-left: 3px; */
+  background-color: white;
   height: 45px;
 }
 .follow {

@@ -1,28 +1,35 @@
-.header {
+.sectionContainer {
+  width: 100%;
+  margin: 0 0 1.5625rem;
+  padding: 0 1rem;
+}
+
+.pageHeader {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  /* padding-left: 5px; */
-}
-.topalbum {
-  font-family: Poppins;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  letter-spacing: 0px;
-  text-align: left;
 }
 
-.Card {
+.cardContainer {
+  margin: 0.625rem 0 0;
+}
+
+.contentWrapper {
   display: flex;
+  gap: 1.5625rem;
   flex-wrap: wrap;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
 }
-.toggletext {
-  color: var(--color-primary);
+
+.toggleLink {
+  margin-right: 0.625rem;
   cursor: pointer;
-  padding-right: 14px;
+  color: var(--color-green);
 }
-.cardwrapper {
-  margin-top: 10px;
+
+.sectionLabel {
+  margin-right: 0.625rem;
+  cursor: pointer;
+  color: var(--color-white);
 }
