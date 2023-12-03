@@ -36,7 +36,7 @@ const Section = ({ title, data, type }) => {
           ) : (
             <Carousel
               data={data}
-              renderCardComponent={(item) => <Card data={item} type={type} />}
+              component={(item) => <Card data={item} type={type} />}
             />
           )}
         </div>
